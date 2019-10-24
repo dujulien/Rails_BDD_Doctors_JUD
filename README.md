@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+FREEDOC PROJECT
 
-Things you may want to cover:
+This project aims at creating a relational database between patients, doctors, appointments, medical specialties and location tables.
 
-* Ruby version
+To feed this database, please type $rails db:seed in your Terminal
 
-* System dependencies
+To test the relations between the tables, you could try the following entries in the rails console ($rails c).
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+	- Doctor.find(5).patients
+	- Patient.find(10).doctors
+	- Doctor.find(14).appointments
+	- Patient.find(30).appointments
+	- City.find(3).appointments
+	- Doctor.find(4).specialties
+	- Specialty.find(2).doctors
